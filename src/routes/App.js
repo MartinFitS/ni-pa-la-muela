@@ -23,14 +23,14 @@ export function MyRoutes(){
         <Route exact path="/login" element={<SignIn/>}/>
         <Route exact path="/register" element={<SignUp/>}/>
         <Route exact path="/restaurants" element={
-          <RequireAuth>
+
             <Restaurantes/>
-          </RequireAuth>
+    
         }/>
         <Route exact path="/restaurants/zo" element={
-        <ProtectorRuta>
+
           <Zo/>
-        </ProtectorRuta>
+
         }/>
         <Route exact path="/aboutus" element={<Aboutus/>}/>
         <Route path="*" element={<NotFound/>}/>

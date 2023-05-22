@@ -2,11 +2,20 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import React, {useState} from "react";
 import {auth} from "../../firebase"
 import "../../styles/signIn.css"
-import { useNavigate  } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+const ErrorPass = () => {
+    return(
+        <div className="errorDiv">
+            <p className="textError">Usuario y/o contraseña incorrectos. Por favor, inténtalo de nuevo.</p>
+        </div>
+    )
+}
 
 const SignIn = () => {
     const [email,setEmail] = useState("");
     const [password, setPassword] = useState(""); 
+    const [error, setError] = useState(null);
     const navigate = useNavigate()
 
     const signIn = (e) => {
@@ -16,8 +25,12 @@ const SignIn = () => {
             console.log(userCredentials)
             navigate("/")
         }).catch((error) => {
-            console.log(error)
+            if(error.code == "auth/wrong-password"){
+                setError("Usuario y/o contraseña incorrectos. Por favor, inténtalo de nuevo.");
+                console.log("la contraseña es incorrecta")
+            }
         })
+
     }
     return(
         <div className="sign-in_container">
@@ -40,15 +53,17 @@ const SignIn = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Enter your password"/>
                 </div>
+
                 <div className="textLogin">
                 <p>¿No tienes una cuenta? <span><a href="/register">REGISTRATE</a></span></p>
                 </div>
                 
                     <button type="submit">Acceder</button>
+                    {error && <ErrorPass/>} {/* Agregar mensaje de error si existe */}
                 </form>
+
             </div>
 
-            
         </div>
     )
 }

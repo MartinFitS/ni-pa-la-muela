@@ -127,7 +127,7 @@ const Zo = () => {
                                         key = {i.id}
                                         {...i}
                                     />
-                                    ):<h1>No hay comentarios pa</h1>
+                                    ):<h1>Registrate para ver que opina la gente.</h1>
                         }
             </div>
 

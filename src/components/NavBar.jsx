@@ -16,7 +16,8 @@ const NavBar = () => {
                             <li><a href="">About Us</a></li>
                             <li><a href="/aboutus">Contactos</a></li>
                             {authUser != null ? <li className="userHead">Bienvenido {authUser.email}</li> : [] }
-                            {authUser != null ? <button className="button_closeSesioninother" onClick={userSignOut}>Cerrar Sesión</button>: <a className="loginRedirect" href="/login">Iniciar Sesion</a>} 
+                            <li>{authUser != null ? <button className="button_closeSesioninother" onClick={userSignOut}>Cerrar Sesión</button>: <a className="" href="/login">Iniciar Sesion</a>} </li>
+                            
                         </ul>
                     </div>
                 </div>

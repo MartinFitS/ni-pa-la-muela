@@ -9,9 +9,9 @@ a{
     text-decoration: none;
 }
 
-.logoNavbar{
+.logoNavbar {
     padding-top: 19px;
-    width: 15%;
+    width: 30%;
     height: 60px;
 }
 
@@ -36,7 +36,7 @@ a{
     font-size: 14px;
     padding-top: 12px;
     list-style: none;
-    padding-left: 40px;
+    padding-left: 20px;
 }
 
 .optionsNavbar a{
