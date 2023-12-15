@@ -7,6 +7,12 @@ NiPaLaMuela is an application that allows you to explore, share, and enjoy gastr
 
 ###ScreenShots
 
+![mainImage](./src/img/main.jpeg)
+
+![restaurantes](./src/img/restuarantes.jpeg)
+
+![platillos](./src/img/platillos.jpeg)
+
 ### Key Features
 
 1. **Local Exploration:** Easily find restaurants near you. Filter by cuisine type, rating, and reviews to discover culinary gems.
